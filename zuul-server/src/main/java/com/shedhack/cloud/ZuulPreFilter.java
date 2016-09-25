@@ -1,4 +1,4 @@
-package demo;
+package com.shedhack.cloud;
 
 import javax.servlet.http.HttpServletRequest;
 import com.netflix.zuul.context.RequestContext;

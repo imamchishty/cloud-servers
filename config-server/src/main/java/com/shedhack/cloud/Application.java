@@ -1,4 +1,4 @@
-package demo;
+package com.shedhack.cloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
