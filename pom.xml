@@ -21,9 +21,9 @@
     <packaging>pom</packaging>
 
     <parent>
-        <groupId>com.shedhack.maven</groupId>
-        <artifactId>maven-parent</artifactId>
-        <version>1.0.0</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.4.0.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -37,6 +37,18 @@
         <docker.image.name>imamchishty/${project.artifactId}</docker.image.name>
         <docker.from>iron/java:1.8</docker.from>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Brixton.SR5</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
@@ -62,7 +74,7 @@
                     <images>
 
                         <image>
-                            <alias>zipkin</alias>
+                            <alias>${project.artifactId}</alias>
                             <name>${docker.image.name}</name>
 
                             <build>
