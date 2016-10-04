@@ -42,6 +42,16 @@ services:
       - eureka
 
 # -----------------------------------
+# TURBINE SERVER [localhost:8073]
+# -----------------------------------
+  turbine:
+    image: imamchishty/turbine-server
+    ports:
+      - "8073:8073"
+    links:
+      - eureka
+
+# -----------------------------------
 # ZIPKIN SERVER [localhost:9411]
 # -----------------------------------
   zipkin:
