@@ -1,6 +1,6 @@
 spring:
   application:
-    name: demo-eureka-server
+    name: eureka-server
   profiles: default
 #  cloud:
 #    config:

@@ -23,6 +23,13 @@ services:
      volumes:
         - ${CONFIG_SERVER_CONFIG_DIR}:${CONFIG_SERVER_CONFIG_DIR}
 
+# -----------------------------------
+# CONFIG SERVER [localhost:8071]
+# -----------------------------------
+ config:
+     image: imamchishty/eureka-server
+     ports:
+      - "8071:8071"
 
 # -----------------------------------
 # ZIPKIN SERVER [localhost:9411]

@@ -1,6 +1,20 @@
 # cloud-servers
 cloud servers
 
+## Docker compose
+
+### How to set up the required properties/variable?
+
+Create a .env file in the same location as docker-compose.yml.
+
+Set the following values:
+
+    CONFIG_SERVER_CONFIG_DIR=/your/config/folder/location
+
+### Running compose?
+
+`docker-compose up`
+
 ## zipkin-server
 
 zipkin server for testing
@@ -39,3 +53,16 @@ Example
 Lets say that the config files are located `/config/apps/hello` then to start:
 
 `docker run -p 8070:8070 -e "CONFIG_DIR=/config/apps/hello/" -v /config/apps/hello/:/config/apps/hello/ -d imamchishty/config-server`
+
+
+## eureka-server
+
+###Docker image:
+
+####Image:
+
+https://hub.docker.com/r/imamchishty/eureka-server/
+
+####Running
+
+`docker run -p 8071:8071 -d imamchishty/eureka-server`
