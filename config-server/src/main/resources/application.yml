@@ -8,9 +8,7 @@ spring:
 # When you do this remove the native prop:
 spring.profiles.active: native
 
-# If you're storing the config files on something like github use the following syntax:
-#spring.cloud.config.server.git.uri: https://github.com/imamchishty/spring-cloud-server
-#spring.cloud.config.server.git.searchPaths: config
+spring.cloud.config.server.native.search-locations: ${CONFIG_DIR}
 
 server:
   port: 8070

@@ -12,6 +12,14 @@
 
     <artifactId>security-server</artifactId>
 
+    <properties>
+        <!-- Docker properties -->
+        <docker.image.name>imamchishty/security-server</docker.image.name>
+        <docker.from>iron/java:1.8</docker.from>
+        <docker.container.port>8074</docker.container.port>
+        <docker.host.port>8074</docker.host.port>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>

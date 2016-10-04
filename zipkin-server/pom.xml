@@ -18,6 +18,9 @@
     </parent>
 
     <properties>
+        <!-- Docker properties -->
+        <docker.image.name>imamchishty/zipkin-server</docker.image.name>
+        <docker.from>iron/java:1.8</docker.from>
         <docker.container.port>9411</docker.container.port>
         <docker.host.port>9411</docker.host.port>
     </properties>
