@@ -11,7 +11,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8071/eureka/
+      defaultZone: http://eureka:8071/eureka/
 
 # When running outside of eureka set this to false and remove the eureka settings above
 #ribbon.eureka.enabled: false
@@ -22,6 +22,5 @@ server:
 # Add the paths for the Gateway
 zuul:
   ignoredPatterns: /**/admin/**
-  #routes.manufacturer-rest:
-    #path: /manufacturer-rest/**
-    #url: http://localhost:8080 -- url is not required if eureka is being used
+
+# Add @EnableDiscoveryClient
